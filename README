@@ -1,0 +1,1 @@
+This plugin allows you to dump ActiveRecord models graphs back into SQL or Rails fixtures format.
