@@ -35,7 +35,7 @@ module SQLMonkey
       bananas << "DELETE FROM #{model.class.quoted_table_name} WHERE #{model.connection.quote_column_name(model.class.primary_key)} = #{model.quoted_id}"
     end
     bananas << "INSERT INTO #{model.class.quoted_table_name} " +
-      "(#{model.send(:quoted_column_names).join(', ')}) " +
+      "(#{model.send(:quoted_column_names).join(', ')}) "  +
       "VALUES(#{model.send(:attributes_with_quotes).values.join(', ')})"
     bananas
   end
